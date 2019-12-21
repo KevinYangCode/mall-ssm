@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.jianzha.mall.mapper.UserMapper">
+
+    <select id="checkEmail" parameterType="string" resultType="int">
+        select count(1) from user where email =#{email}
+    </select>
+
+    <insert id="register" parameterType="User">
+        insert into user
+        (email,
+        tel,
+        password,
+        username,
+        sex,
+        hobby,
+        age,
+        address)
+        values
+        (#{email} ,
+        #{tel} ,
+        #{password} ,
+        #{username} ,
+        #{sex} ,
+        #{hobby} ,
+        #{age} ,
+        #{address} );
+    </insert>
+
+    <select id="loginUser" parameterType="User" resultType="User">
+        select
+        uid,
+        email,
+        tel,
+        password,
+        username,
+        sex,
+        hobby,
+        age,
+        address
+        from user
+        where
+        email = #{email}
+        and password = #{password}
+    </select>
+
+    <update id="updateUserData" parameterType="User">
+        update user
+        <set>
+            <if test="tel != null and tel != ''">
+                tel = #{tel},
+            </if>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="sex != null and sex != ''">
+                sex = #{sex},
+            </if>
+            <if test="hobby != null and hobby != ''">
+                hobby = #{hobby},
+            </if>
+            <if test="age != null and age != ''">
+                tel = #{tel},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+        </set>
+        where email = #{email}
+    </update>
+
+
+</mapper>

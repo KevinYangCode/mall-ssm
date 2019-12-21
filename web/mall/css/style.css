@@ -1,0 +1,56 @@
+/*所有超链接不要下划线*/
+.list a:hover {
+    text-decoration: none;
+	outline: none;
+}
+.list a:visited{
+	text-decoration: none;
+	outline: none;
+}
+
+.table a:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+.book {
+	height: 40px;
+	width: 540px;
+	/*background:#99D9EA;*/
+	float: left;
+	margin-top: 30px;
+}
+
+.text {
+	width: 270px;
+	height: 42px;
+	border: 2px solid #A7A7A7;
+}
+.text2 {
+	width: 145px;
+	height: 42px;
+	border: 1px solid #A7A7A7;
+}
+
+.SE {
+	width: 120px;
+	height: 42px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #A7A7A7;
+	color: #FFFFFF;
+	border: #A7A7A7;
+	float: right;
+}
+
+.SE:hover {
+	width: 120px;
+	height: 42px;
+	font-size: 20px;
+	background-color: #777777;
+	color: #FFFFFF;
+	font-weight: bold;
+	border: #777777;
+	float: right;
+}
+

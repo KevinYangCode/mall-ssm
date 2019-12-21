@@ -1,0 +1,327 @@
+/* 侧导航的CSS文件	 */
+
+@charset "utf-8";
+
+.navfull h3, ul{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*所有超链接不要下划线*/
+a:link, a:visited, a:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+a:hover {
+	color: #000000;
+}
+
+dt+dd {
+	margin-top: 0;
+}
+
+.navfull {
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 12px;
+	font-family: arial, "Lantinghei SC", "Microsoft Yahei";
+}
+
+#navi {
+	display: block;
+	position: absolute;
+	display: block;
+	z-index: auto;
+
+}
+
+.category-content .category-list.navTwo li {
+	height: 36px;
+}
+
+.category-content .category-list.navTwo .b-category-name {
+	line-height: 28px;
+}
+
+.category-content .category-list.navTwo .category-name i img {
+	width: 22px;
+	height: 22px;
+	border-radius: 22px;
+}
+
+/*导航*/
+#navi .category-content {
+	position: relative;
+	width: 180px;
+	float: left;
+	z-index: 113;
+	background: #fff;
+}
+
+/* 方块颜色 */
+.category-content .category {
+	width: 180px;
+	border: 1px solid #E0E0E0;
+	border-top: none;
+	background: #A7A7A7;
+	box-shadow: 8px 0 7px -3px rgba(0, 0, 0, .3)
+}
+
+.category-content .category-list li {
+	height: 45px;
+	margin-top: -2px;
+	z-index: 113;
+	border-top: 1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0
+}
+
+.category-content .category-list li.first {
+	margin-top: 0;
+}
+
+.category-content .category-list a:hover {
+	text-decoration: none;
+	color: #F03726;
+}
+
+.category-content .category-name {
+	overflow: hidden;
+	position: relative;
+}
+
+.category-content .category-name i {
+	top: 6px
+}
+
+.category-content .category-name i img {
+	position: absolute;
+	top: 6px;
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	left: 6px;
+	display: block;
+}
+
+.category-content .category-name .ml-22 {
+	font-size: 14px;
+	margin-left: 35px;
+}
+
+.category-content .b-category-name {
+	line-height: 32px;
+	padding-top: 3px;
+	padding-left: 10px;
+}
+
+.category-content .b-category-name b {
+	margin-left: 4px;
+	font: 400 12px/28px "宋体";
+}
+
+.category-content .b-category-name a {
+	color: #fff;
+}
+
+.category-content .b-category-name .fr {
+	background-position: 0 -629px;
+	width: 22px;
+	height: 22px;
+	margin: 10px 16px 0 0;
+}
+
+.category-content .category-info {
+	position: relative;
+	height: 100%;
+	padding-left: 12px;
+	width: 182px;
+	overflow: hidden;
+}
+
+.category-content .category-info em {
+	position: absolute;
+	top: 9px;
+	right: 15px;
+	width: 13px;
+	height: 13px;
+	font: 12px/18px "宋体";
+	color: #9b9b9b;
+}
+
+.category-content .category .hover {
+	margin-left: -1px;
+	padding-left: 1px;
+	z-index: 999;
+}
+
+.category-content .hover .category-info {
+	border: none;
+	text-decoration: none;
+	background: #fff;
+}
+
+.category-content .menu-item {
+	position: absolute;
+	left: 173px;
+	height: 100%;
+	z-index: 11;
+	padding: 0 0 0 2px;
+	width: 760px;
+	background: #fff;
+	border: none;
+	border-top: 1px solid #bbb;
+}
+
+.category-content .menu-item .area-in {
+	position: relative;
+	z-index: 1;
+}
+
+.category-content .menu-item .area-bg {
+	padding: 10px 0 10px 40px;
+}
+
+.category-content .menu-in {
+	display: none;
+}
+
+.category-content .category-list li.hover .category-info {
+	z-index: 999;
+}
+
+.category-content .category-list li.hover .b-category-name a {
+	color: #4c4c4c;
+}
+
+.category-content .menu-srot {
+	width: 100%;
+	overflow: hidden;
+}
+
+.menu-srot .sort-side {
+	overflow: hidden
+}
+
+.sort-side .dl-sort {
+	float: left;
+	width: 100%;
+}
+
+.sort-side dt {
+	margin-top: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #F03726;
+	text-align: left;
+}
+
+.sort-side dd {
+	float: left;
+	margin: 2px 6px 4px 0;
+}
+
+.sort-side dd a {
+	float: left;
+	width: auto;
+	letter-spacing: 0.5px;
+	line-height: 14px;
+	color: #888;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 3px 10px;
+	border: 1px solid #e6e6e6;
+}
+
+.sort-side dd a:hover{
+	border: 1px solid #F03726;
+}
+
+.sort-side dd a span.red {
+	color: #DB3E54;
+}
+
+.menu-srot .brand-side {
+	float: left;
+	position: relative;
+	margin-left: -10px;
+	padding-top: 10px;
+}
+
+.brand-side {
+	margin-top: 50px;
+	border-top: 1px solid #eae9e9;
+}
+
+.brand-side .dl-sort {
+	overflow: hidden;
+	height: 70px;
+}
+
+.brand-side dt {
+	position: absolute;
+	top: -22px;
+	padding: 0 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.brand-side dd {
+	float: left;
+	padding: 5px 0;
+}
+
+.brand-side dd a {
+	display: block;
+	padding: 0 10px;
+	line-height: 1;
+	border-right: 1px solid #bcbcbc;
+	color: #888;
+}
+
+.brand-side dd a.more {
+	color: #b6b6b6;
+}
+
+.category-content .menu-item.top {
+	top: -2px;
+}
+
+.category-content .menu-item.bottom {
+	bottom: -2px;
+	*bottom: -5px;
+}
+
+.sort-side .dl-sort {
+	float: left;
+	width: 50%;
+}
+
+/* 子栏的边框 */
+.category-list li.hover .menu-in {
+	border: 2px solid #E0E0E0;
+}

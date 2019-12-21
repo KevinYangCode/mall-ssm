@@ -1,0 +1,14 @@
+.foot{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom:20px;
+}
+
+.foot a{
+    color: #23527c;
+}
+
+.foot a:hover{
+    color:#337AB7;
+    outline: none;
+}

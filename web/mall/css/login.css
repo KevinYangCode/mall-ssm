@@ -1,0 +1,22 @@
+.partner {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+.partner a:hover{
+    text-decoration: none;
+    outline: none;
+}
+
+.mr-btn-group {
+    display: block;
+    overflow: hidden;
+}
+
+.mr-btn-group li {
+    width: 33.333%;
+    display: block;
+    float: left;
+}
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.jianzha.mall.mapper.ProductMapper">
+
+    <sql id="product">
+        pid,
+        pname,
+        pimage,
+        price,
+        pic_1,
+        pic_2,
+        pic_3,
+        pic_4,
+        bid
+    </sql>
+
+    <sql id="product_where">
+        <where>
+            <if test="b_id !=null and b_id != ''">
+                and bid = #{b_id}
+            </if>
+            <if test="proName !=null and proName != ''">
+                and pname LIKE '%${proName}%'
+            </if>
+            <if test="price !=null and price != ''">
+                and 1=1
+                <if test="price == 1">
+                    and price &lt; 2000
+                </if>
+                <if test="price == 2">
+                    and price &gt;= 2000 and price &lt; 3000
+                </if>
+                <if test="price == 3">
+                    and price &gt;= 3000 and price &lt; 4000
+                </if>
+                <if test="price == 4">
+                    and price &gt;= 4000 and price &lt; 5000
+                </if>
+                <if test="price == 5">
+                    and price &gt;= 5000
+                </if>
+            </if>
+        </where>
+    </sql>
+
+    <select id="getProductByQueryVo" parameterType="QueryVo" resultType="Product">
+        select
+        <include refid="product"/>
+        from product
+        <include refid="product_where"/>
+        limit
+        #{start} , #{pageSize};
+    </select>
+
+    <select id="getCountByQueryVo" parameterType="QueryVo" resultType="int">
+        select count(1)
+        from product
+        <include refid="product_where"/>
+    </select>
+
+    <select id="getProductDetail" parameterType="integer" resultType="Product">
+        select
+        <include refid="product"/>
+        from product
+        where pid = #{pid}
+    </select>
+
+    <select id="FindCartForUid" parameterType="integer" resultType="Cart">
+        select * from cart where uid = #{uid}
+    </select>
+
+    <insert id="addCart" parameterType="string">
+
+    </insert>
+
+</mapper>

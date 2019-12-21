@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.jianzha.mall.mapper.CartMapper">
+
+    <select id="FindCartForUid" parameterType="integer" resultType="Cart">
+        select * from cart where uid = #{uid}
+    </select>
+
+    <delete id="deleteCartForCid" parameterType="integer">
+        delete from cart where cid = #{cid}
+    </delete>
+
+    <delete id="deleteCartForUid" parameterType="integer">
+        delete from cart where uid = #{uid}
+    </delete>
+
+    <update id="updateCartNumber" parameterType="Cart">
+        update cart set
+         number = number + #{number}, total = total + #{total}
+        where
+         pid = #{pid} and uid = #{uid}
+    </update>
+
+    <insert id="addCart" parameterType="Cart">
+          insert into cart
+          (pid,cimage,cname,cprice,number,total,uid)
+          values
+          (#{pid},#{cimage},#{cname},#{cprice},#{number},#{total},#{uid})
+    </insert>
+
+    <insert id="addOrder" parameterType="Order">
+          insert into orders
+          (ordername,ordertel,orderaddress,ordertotal,uid)
+          values
+          (#{ordername},#{ordertel},#{orderaddress},#{ordertotal},#{uid})
+    </insert>
+
+    <select id="FindOrderForUid" parameterType="integer" resultType="Order">
+        select * from orders where uid = #{uid}
+    </select>
+
+    <delete id="deleteOrderForOid" parameterType="integer">
+        delete from orders where oid =  #{oid}
+    </delete>
+
+</mapper>

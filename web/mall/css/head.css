@@ -1,0 +1,17 @@
+.head-a a{
+    color: black;
+}
+
+.head-a a:hover{
+    color:red;
+    text-decoration: none;
+    outline: none;
+}
+
+#top-input {
+    height: 40px;
+    background: #DEE1E6;
+    font-size: 14px;
+    font-family: 宋体;
+    text-align: right;
+}
