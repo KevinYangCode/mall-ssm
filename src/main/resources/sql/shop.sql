@@ -152,7 +152,7 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, '15766334359', '851512175@qq.com', '123456', 'admin', '男', '篮球', '21', '广东技术师范学院天河学院');
-INSERT INTO `user` VALUES (7, '15766334359', '123456789@qq.com', '111111', '杨家浩', '女', '篮球', '20', '广东技术师范大学天河学院');
+INSERT INTO `user` VALUES (1, '11222330', '123456789@qq.com', '123456', 'admin', '男', '篮球', '21', '广技师');
+INSERT INTO `user` VALUES (7, '1576114359', '123456789@qq.com', '123456', 'kevin', '女', '篮球', '20', '广技师');
 
 SET FOREIGN_KEY_CHECKS = 1;
